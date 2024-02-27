@@ -54,3 +54,66 @@ String resultado = optionalVacio.orElseThrow(() -> new NoSuchElementException("E
 -  <b>Fluidez en el flujo de trabajo:</b> Puede integrarse fácilmente en el flujo de trabajo de programación funcional, como el uso de map, filter, y otros métodos de Stream.
 
 <p>Es importante notar que Optional no debería utilizarse para todos los casos. Es especialmente útil cuando necesitas expresar claramente la posibilidad de un valor nulo en tu API, pero no debe ser utilizado de manera excesiva para envolver todos los valores. Se debe aplicar con discernimiento según el contexto.</p>
+
+<h2 align="center">'Optional.empty( )', 'Optional.of( )', y 'Optional.ofNullable( )'</h2>
+
+<p>Los métodos <b>'Optional.empty()'</b>, <b>'Optional.of(T valor)'</b>, y <b>'Optional.ofNullable(T valor)'</b> son formas de crear instancias de la clase Optional en Java, que se utiliza para representar valores opcionales que pueden ser nulos.</p>
+
+<h3>Optional.empty():</h3>
+
+```java
+Optional<String> optionalVacio = Optional.empty();
+```
+<p>Este método estático de la clase Optional se utiliza para crear una instancia de Optional que representa la ausencia de un valor, es decir, un Optional vacío. Puede drt utilizado cuando se desea indicar explícitamente que no hay ningún valor presente.</p>
+
+Ejemplo de uso:
+
+```java
+Optional<String> optionalVacio = Optional.empty();
+
+if (optionalVacio.isPresent()) {
+    System.out.println("Este mensaje no se imprimirá porque el Optional está vacío.");
+}
+```
+
+<h3>Optional.of(T valor):</h3>
+
+```java
+Optional<String> optionalConValor = Optional.of("Hola, mundo!");
+```
+
+<p>Este método estático de la clase Optional se utiliza para crear una instancia de Optional que contiene un valor no nulo. Si el valor proporcionado es nulo, of lanzará una excepción NullPointerException. Por lo tanto, se debe estar seguro de que el valor que se está envolviendo no es nulo.</p>
+
+Ejemplo de uso:
+
+```java
+Optional<String> optionalConValor = Optional.of("Hola, mundo!");
+
+if (optionalConValor.isPresent()) {
+    System.out.println("El Optional contiene el valor: " + optionalConValor.get());
+}
+```
+
+<h3>Optional.ofNullable(T valor):</h3>
+
+```java
+String cadena = "Hola, mundo!";
+Optional<String> optionalPosiblementeNulo = Optional.ofNullable(cadena);
+```
+
+<p>Este método estático de la clase Optional se utiliza para crear una instancia de Optional que puede contener un valor nulo. A diferencia de Optional.of, ofNullable no lanzará una excepción si el valor proporcionado es nulo. Si el valor es no nulo, ofNullable devolverá un Optional con el valor; de lo contrario, devolverá un Optional vacío.</p>
+
+Ejemplo de uso:
+
+```java
+String cadena = "Hola, mundo!";
+Optional<String> optionalPosiblementeNulo = Optional.ofNullable(cadena);
+
+if (optionalPosiblementeNulo.isPresent()) {
+    System.out.println("El Optional contiene el valor: " + optionalPosiblementeNulo.get());
+} else {
+    System.out.println("El Optional está vacío.");
+}
+```
+
+<p>Estos métodos son útiles para trabajar de manera más segura con valores opcionales y evitar NullPointerException. La elección entre ellos depende de si el valor que se está envolviendo puede o no ser nulo y de la preferencia en el manejo de nulos.</p>
