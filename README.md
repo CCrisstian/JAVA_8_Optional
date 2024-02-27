@@ -117,3 +117,4 @@ if (optionalPosiblementeNulo.isPresent()) {
 ```
 
 <p>Estos métodos son útiles para trabajar de manera más segura con valores opcionales y evitar NullPointerException. La elección entre ellos depende de si el valor que se está envolviendo puede o no ser nulo y de la preferencia en el manejo de nulos.</p>
+
