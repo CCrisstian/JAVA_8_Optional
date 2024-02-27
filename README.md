@@ -47,10 +47,10 @@ String resultado = optionalVacio.orElseThrow(() -> new NoSuchElementException("E
 
 <h3>Beneficios de Optional:</h3>
 
--  Evita NullPointerException: Al utilizar Optional, se puede reducir la probabilidad de NullPointerException ya que fuerza al programador a considerar la posibilidad de valores nulos.
+-  <b>Evita NullPointerException:</b> Al utilizar Optional, se puede reducir la probabilidad de NullPointerException ya que fuerza al programador a considerar la posibilidad de valores nulos.
 
--  Expresividad y claridad: Al utilizar métodos como orElse, ifPresent, etc., el código se vuelve más expresivo y claro en comparación con las verificaciones manuales de nulos.
+-  <b>Expresividad y claridad:</b> Al utilizar métodos como orElse, ifPresent, etc., el código se vuelve más expresivo y claro en comparación con las verificaciones manuales de nulos.
 
--  Fluidez en el flujo de trabajo: Puede integrarse fácilmente en el flujo de trabajo de programación funcional, como el uso de map, filter, y otros métodos de Stream.
+-  <b>Fluidez en el flujo de trabajo:</b> Puede integrarse fácilmente en el flujo de trabajo de programación funcional, como el uso de map, filter, y otros métodos de Stream.
 
 <p>Es importante notar que Optional no debería utilizarse para todos los casos. Es especialmente útil cuando necesitas expresar claramente la posibilidad de un valor nulo en tu API, pero no debe ser utilizado de manera excesiva para envolver todos los valores. Se debe aplicar con discernimiento según el contexto.</p>
