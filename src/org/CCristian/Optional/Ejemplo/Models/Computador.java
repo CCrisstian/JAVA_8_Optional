@@ -28,8 +28,8 @@ public class Computador {
 /*-----------------MÉTODOS-----------------*/
     @Override
     public String toString() {
-        return "Computador\t" +
-                "\tNombre='" + nombre +
-                "\tModelo='" + modelo;
+        return "Computador" +
+                "\tNombre= '" + nombre + "'"+
+                "\tModelo='" + modelo + "'";
     }
 }

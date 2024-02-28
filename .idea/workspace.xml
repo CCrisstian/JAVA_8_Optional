@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80aec461-ef44-4854-8976-6b38b39ef30a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/org/CCristian/Optional/Ejemplo/Ejemplo_Optional.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/CCristian/Optional/Ejemplo/Models/Computador.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/CCristian/Optional/Ejemplo/Repositorio/Computador_Repositorio.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/CCristian/Optional/Ejemplo/Repositorio/Repositorio_Interface.java" afterDir="false" />
+    <list default="true" id="80aec461-ef44-4854-8976-6b38b39ef30a" name="Changes" comment="Primeros ejemplos de 'Optional'">
+      <change afterPath="$PROJECT_DIR$/src/org/CCristian/Optional/Ejemplo/Ejemplo_Repositorio.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/CCristian/Optional/Ejemplo/Models/Computador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/CCristian/Optional/Ejemplo/Models/Computador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/CCristian/Optional/Ejemplo/Repositorio/Computador_Repositorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/CCristian/Optional/Ejemplo/Repositorio/Computador_Repositorio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/CCristian/Optional/Ejemplo/Repositorio/Repositorio_Interface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/CCristian/Optional/Ejemplo/Repositorio/Repositorio_Interface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +27,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -42,6 +45,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Ejemplo_Optional.executor": "Run",
+    "Application.Ejemplo_Repositorio.executor": "Run",
     "Application.Main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -66,6 +70,30 @@
       <option name="presentableId" value="Default" />
       <updated>1709064243936</updated>
     </task>
+    <task id="LOCAL-00001" summary="Primeros ejemplos de 'Optional'">
+      <option name="closed" value="true" />
+      <created>1709071861891</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1709071861891</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Primeros ejemplos de 'Optional'" />
+    <option name="LAST_COMMIT_MESSAGE" value="Primeros ejemplos de 'Optional'" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/org/CCristian/Optional/Ejemplo/Ejemplo_Repositorio.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
