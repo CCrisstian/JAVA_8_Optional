@@ -118,3 +118,38 @@ if (optionalPosiblementeNulo.isPresent()) {
 
 <p>Estos métodos son útiles para trabajar de manera más segura con valores opcionales y evitar NullPointerException. La elección entre ellos depende de si el valor que se está envolviendo puede o no ser nulo y de la preferencia en el manejo de nulos.</p>
 
+<h2 align="center">orElse y orElseGet</h2>
+
+<p>Ambos <b>'orElse'</b> y <b>'orElseGet'</b> son métodos de la clase Optional en Java, que se utilizan para proporcionar un valor por defecto en caso de que el Optional esté vacío. Ambos métodos devuelven el valor contenido en el Optional si está presente, o el valor por defecto si el Optional está vacío. La diferencia principal entre ellos radica en cómo manejan la creación del valor por defecto.</p>
+
+<h3>orElse</h3>
+<p>Este método simplemente toma un valor por defecto y lo devuelve si el Optional está vacío. Se evalúa incluso si el Optional ya contiene un valor.</p>
+
+Ejemplo:
+
+```java
+Optional<String> optionalConValor = Optional.of("Hola, mundo!");
+String resultado = optionalConValor.orElse("Valor por defecto");
+
+System.out.println("Resultado: " + resultado);  // Imprimirá "Resultado: Hola, mundo!"
+```
+
+<h3>orElseGet</h3>
+<p>Este método toma un proveedor de valores (un Supplier) y lo evalúa solo si el Optional está vacío. Esto permite una evaluación perezosa del valor por defecto.</p>
+
+Ejemplo:
+
+```java
+Optional<String> optionalVacio = Optional.empty();
+String resultado = optionalVacio.orElseGet(() -> "Valor generado por el proveedor");
+
+System.out.println("Resultado: " + resultado);  // Imprimirá "Resultado: Valor generado por el proveedor"
+```
+
+<h3>Elección entre 'orElse' y 'orElseGet':</h3>
+
+-    Si el valor por defecto no requiere cálculos costosos o no tiene efectos secundarios, <b>'orElse'</b> es conveniente.
+
+-    Si el valor por defecto es costoso de calcular o tiene efectos secundarios que se desea evitar a menos que sea necesario, entonces <b>'orElseGet'</b> proporciona una evaluación perezosa y es más eficiente.
+
+<p>Ambos métodos son útiles para manejar situaciones en las que un Optional puede estar vacío y se necesita proporcionar un valor por defecto en ese caso. La elección entre ellos dependerá de los requisitos específicos del código.</p>
