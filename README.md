@@ -118,12 +118,12 @@ if (optionalPosiblementeNulo.isPresent()) {
 
 <p>Estos métodos son útiles para trabajar de manera más segura con valores opcionales y evitar NullPointerException. La elección entre ellos depende de si el valor que se está envolviendo puede o no ser nulo y de la preferencia en el manejo de nulos.</p>
 
-<h2 align="center">'orElse' y 'orElseGet'</h2>
+<h2 align="center">'orElse', 'orElseGet', y 'orElseThrow'</h2>
 
-<p>Ambos <b>'orElse'</b> y <b>'orElseGet'</b> son métodos de la clase Optional en Java, que se utilizan para proporcionar un valor por defecto en caso de que el Optional esté vacío. Ambos métodos devuelven el valor contenido en el Optional si está presente, o el valor por defecto si el Optional está vacío. La diferencia principal entre ellos radica en cómo manejan la creación del valor por defecto.</p>
+<p>Los métodos <b>'orElse'</b>, <b>'orElseGet'</b>, y <b>'orElseThrow'</b> son métodos de la clase Optional en Java y se utilizan para obtener un valor por defecto si el Optional está vacío.</p>
 
 <h3>'orElse'</h3>
-<p>Este método simplemente toma un valor por defecto y lo devuelve si el Optional está vacío. Se evalúa incluso si el Optional ya contiene un valor.</p>
+<p>Este método devuelve el valor contenido en el Optional si está presente; de lo contrario, devuelve el valor por defecto proporcionado como argumento.</p>
 
 Ejemplo:
 
@@ -135,7 +135,7 @@ System.out.println("Resultado: " + resultado);  // Imprimirá "Resultado: Hola, 
 ```
 
 <h3>'orElseGet'</h3>
-<p>Este método toma un proveedor de valores (un Supplier) y lo evalúa solo si el Optional está vacío. Esto permite una evaluación perezosa del valor por defecto.</p>
+<p>Este método devuelve el valor contenido en el Optional si está presente; de lo contrario, evalúa el proveedor de valores (un Supplier) y devuelve el valor generado por ese proveedor.</p>
 
 Ejemplo:
 
@@ -146,10 +146,27 @@ String resultado = optionalVacio.orElseGet(() -> "Valor generado por el proveedo
 System.out.println("Resultado: " + resultado);  // Imprimirá "Resultado: Valor generado por el proveedor"
 ```
 
-<h3>Elección entre 'orElse' y 'orElseGet':</h3>
+<h3>'orElseThrow'</h3>
+<p>Este método devuelve el valor contenido en el Optional si está presente; de lo contrario, evalúa el proveedor de excepciones (un Supplier que proporciona una excepción) y lanza la excepción generada por ese proveedor.</p>
 
--    Si el valor por defecto no requiere cálculos costosos o no tiene efectos secundarios, <b>'orElse'</b> es conveniente.
+Ejemplo:
 
--    Si el valor por defecto es costoso de calcular o tiene efectos secundarios que se desea evitar a menos que sea necesario, entonces <b>'orElseGet'</b> proporciona una evaluación perezosa y es más eficiente.
+```java
+Optional<String> optionalVacio = Optional.empty();
+try {
+    String resultado = optionalVacio.orElseThrow(() -> new NoSuchElementException("El Optional está vacío"));
+    System.out.println("Resultado: " + resultado);  // No llegará a este punto
+} catch (NoSuchElementException e) {
+    System.out.println("Excepción atrapada: " + e.getMessage());  // Imprimirá "Excepción atrapada: El Optional está vacío"
+}
+```
 
-<p>Ambos métodos son útiles para manejar situaciones en las que un Optional puede estar vacío y se necesita proporcionar un valor por defecto en ese caso. La elección entre ellos dependerá de los requisitos específicos del código.</p>
+<h3>Elección entre 'orElse', 'orElseGet', y 'orElseThrow':</h3>
+
+-    <b>'orElse':</b>: Es útil cuando el valor por defecto no tiene un costo significativo para calcular y no hay efectos secundarios asociados con su cálculo.
+
+-    <b>'orElseGet':</b> Es útil cuando el valor por defecto es costoso de calcular o tiene efectos secundarios, ya que proporciona evaluación perezosa.
+
+-    <b>'orElseThrow':</b> Es útil cuando se desea lanzar una excepción específica si el Optional está vacío. Se puede proporcionar un proveedor que genera la excepción.
+
+<p>La elección entre estos métodos dependerá de la situación específica y los requisitos del código..</p>
