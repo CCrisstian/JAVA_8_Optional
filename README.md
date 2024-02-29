@@ -118,11 +118,11 @@ if (optionalPosiblementeNulo.isPresent()) {
 
 <p>Estos métodos son útiles para trabajar de manera más segura con valores opcionales y evitar NullPointerException. La elección entre ellos depende de si el valor que se está envolviendo puede o no ser nulo y de la preferencia en el manejo de nulos.</p>
 
-<h2 align="center">orElse y orElseGet</h2>
+<h2 align="center">'orElse' y 'orElseGet'</h2>
 
 <p>Ambos <b>'orElse'</b> y <b>'orElseGet'</b> son métodos de la clase Optional en Java, que se utilizan para proporcionar un valor por defecto en caso de que el Optional esté vacío. Ambos métodos devuelven el valor contenido en el Optional si está presente, o el valor por defecto si el Optional está vacío. La diferencia principal entre ellos radica en cómo manejan la creación del valor por defecto.</p>
 
-<h3>orElse</h3>
+<h3>'orElse'</h3>
 <p>Este método simplemente toma un valor por defecto y lo devuelve si el Optional está vacío. Se evalúa incluso si el Optional ya contiene un valor.</p>
 
 Ejemplo:
@@ -134,7 +134,7 @@ String resultado = optionalConValor.orElse("Valor por defecto");
 System.out.println("Resultado: " + resultado);  // Imprimirá "Resultado: Hola, mundo!"
 ```
 
-<h3>orElseGet</h3>
+<h3>'orElseGet'</h3>
 <p>Este método toma un proveedor de valores (un Supplier) y lo evalúa solo si el Optional está vacío. Esto permite una evaluación perezosa del valor por defecto.</p>
 
 Ejemplo:
