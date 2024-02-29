@@ -18,29 +18,29 @@ Optional<String> optionalVacio = Optional.empty(); // Representa la ausencia de 
 
 <h3>Métodos Principales:</h3>
 
--  <b>isPresent():</b> Verifica si el Optional contiene un valor.
+-  <b>'isPresent()':</b> Verifica si el Optional contiene un valor.
 ```java
 if (optionalString.isPresent()) {
     System.out.println("El Optional contiene un valor.");
 }
 ```
 
--  <b>ifPresent(Consumer<T> consumer):</b> Ejecuta una acción si el Optional contiene un valor.
+-  <b>'ifPresent(Consumer<T> consumer)':</b> Ejecuta una acción si el Optional contiene un valor.
 ```java
 optionalString.ifPresent(valor -> System.out.println("Valor presente: " + valor));
 ```
 
--  <b>orElse(T valorPorDefecto):</b> Devuelve el valor contenido en el Optional, o un valor por defecto si está vacío.
+-  <b>'orElse(T valorPorDefecto)':</b> Devuelve el valor contenido en el Optional, o un valor por defecto si está vacío.
 ```java
 String resultado = optionalNulo.orElse("Valor por defecto");
 ```
 
--  <b>orElseGet(Supplier<T> proveedor):</b> Devuelve el valor contenido en el Optional, o el resultado de un proveedor si está vacío.
+-  <b>'orElseGet(Supplier<T> proveedor)':</b> Devuelve el valor contenido en el Optional, o el resultado de un proveedor si está vacío.
 ```java
 String resultado = optionalVacio.orElseGet(() -> "Valor generado por el proveedor");
 ```
 
--  <b>orElseThrow(Supplier<? extends X> excepcionProveedor):</b> Devuelve el valor contenido en el Optional, o lanza una excepción proporcionada por el proveedor si está vacío.
+-  <b>'orElseThrow(Supplier<? extends X> excepcionProveedor)':</b> Devuelve el valor contenido en el Optional, o lanza una excepción proporcionada por el proveedor si está vacío.
 ```java
 String resultado = optionalVacio.orElseThrow(() -> new NoSuchElementException("El Optional está vacío"));
 ```
