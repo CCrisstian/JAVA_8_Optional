@@ -12,9 +12,11 @@ Optional<String> optionalNulo = Optional.ofNullable(null); // Puede contener un 
 Optional<String> optionalVacio = Optional.empty(); // Representa la ausencia de valor
 ```
 
--  <b>Optional.of(valor)</b> crea un Optional que contiene un valor no nulo.
--  <b>Optional.ofNullable(valor)</b> crea un Optional que puede contener un valor nulo.
--  <b>Optional.empty()</b> crea un Optional vacío, sin ningún valor presente.
+-  <b>'Optional.of(valor)'</b> crea un Optional que contiene un valor no nulo.
+  
+-  <b>'Optional.ofNullable(valor)'</b> crea un Optional que puede contener un valor nulo.
+  
+-  <b>'Optional.empty()'</b> crea un Optional vacío, sin ningún valor presente.
 
 <h3>Métodos Principales:</h3>
 
