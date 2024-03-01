@@ -172,3 +172,51 @@ try {
 -    <b>'orElseThrow':</b> Es útil cuando se desea lanzar una excepción específica si el Optional está vacío. Se puede proporcionar un proveedor que genera la excepción.
 
 <p>La elección entre estos métodos dependerá de la situación específica y los requisitos del código..</p>
+
+<h2 align="center">Métodos de Verificación y Ejecución Condicional:</h2>
+
+-  <b>'isPresent()':</b>
+    -  Descripción: Verifica si el Optional contiene un valor.
+    -  Ejemplo:
+      
+```java
+Optional<String> optional = Optional.of("Hola, mundo!");
+if (optional.isPresent()) {
+    // Realizar alguna acción si hay un valor presente
+}
+```
+-  <b>'ifPresent':</b>
+    -   Descripción: Ejecuta una acción si el Optional contiene un valor.
+    -  Ejemplo:
+ ```java
+Optional<String> optional = Optional.of("Hola, mundo!");
+optional.ifPresent(valor -> System.out.println("Valor presente: " + valor));
+```
+
+<h2 align="center">Métodos de Transformación y Mapeo:</h2>
+
+-  <b>'map':</b>
+    -  Descripción: Aplica una función al valor contenido en el Optional si está presente y devuelve un nuevo Optional que contiene el resultado.
+    -  Ejemplo:
+ ```java
+Optional<String> optional = Optional.of("Hola, mundo!");
+Optional<Integer> longitudOptional = optional.map(String::length);
+```
+
+-  <b>'flatMap':</b>
+    -  Descripción: Similar a map, pero la función de mapeo debe devolver un Optional. Útil para evitar Optional<Optional<T>>.
+    -  Ejemplo:
+ ```java
+Optional<String> optional = Optional.of("Hola, mundo!");
+Optional<Integer> longitudOptional = optional.flatMap(s -> Optional.of(s.length()));
+```
+
+<h2 align="center">Métodos de Filtrado:</h2>
+
+-  <b>'filter':</b>
+    -  Descripción: Condiciona el Optional a contener un valor solo si cumple con el predicado proporcionado.
+    -  Ejemplo:
+ ```java
+Optional<String> optional = Optional.of("Hola, mundo!");
+Optional<String> filtrado = optional.filter(s -> s.length() > 5);
+```
