@@ -61,7 +61,7 @@ String resultado = optionalVacio.orElseThrow(() -> new NoSuchElementException("E
 
 <p>Los métodos <b>'Optional.empty()'</b>, <b>'Optional.of(T valor)'</b>, y <b>'Optional.ofNullable(T valor)'</b> son formas de crear instancias de la clase Optional en Java, que se utiliza para representar valores opcionales que pueden ser nulos.</p>
 
-<h3>Optional.empty():</h3>
+<h3>'Optional.empty()':</h3>
 
 ```java
 Optional<String> optionalVacio = Optional.empty();
@@ -78,7 +78,7 @@ if (optionalVacio.isPresent()) {
 }
 ```
 
-<h3>Optional.of(T valor):</h3>
+<h3>'Optional.of(T valor)':</h3>
 
 ```java
 Optional<String> optionalConValor = Optional.of("Hola, mundo!");
@@ -96,7 +96,7 @@ if (optionalConValor.isPresent()) {
 }
 ```
 
-<h3>Optional.ofNullable(T valor):</h3>
+<h3>'Optional.ofNullable(T valor)':</h3>
 
 ```java
 String cadena = "Hola, mundo!";
