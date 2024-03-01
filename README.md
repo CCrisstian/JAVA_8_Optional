@@ -20,29 +20,29 @@ Optional<String> optionalVacio = Optional.empty(); // Representa la ausencia de 
 
 <h3>Métodos Principales:</h3>
 
--  <b>'isPresent()':</b> Verifica si el Optional contiene un valor.
+-  <b>'isPresent()'</b> Verifica si el Optional contiene un valor.
 ```java
 if (optionalString.isPresent()) {
     System.out.println("El Optional contiene un valor.");
 }
 ```
 
--  <b>'ifPresent(Consumer<T> consumer)':</b> Ejecuta una acción si el Optional contiene un valor.
+-  <b>'ifPresent(Consumer<T> consumer)'</b> Ejecuta una acción si el Optional contiene un valor.
 ```java
 optionalString.ifPresent(valor -> System.out.println("Valor presente: " + valor));
 ```
 
--  <b>'orElse(T valorPorDefecto)':</b> Devuelve el valor contenido en el Optional, o un valor por defecto si está vacío.
+-  <b>'orElse(T valorPorDefecto)'</b> Devuelve el valor contenido en el Optional, o un valor por defecto si está vacío.
 ```java
 String resultado = optionalNulo.orElse("Valor por defecto");
 ```
 
--  <b>'orElseGet(Supplier<T> proveedor)':</b> Devuelve el valor contenido en el Optional, o el resultado de un proveedor si está vacío.
+-  <b>'orElseGet(Supplier<T> proveedor)'</b> Devuelve el valor contenido en el Optional, o el resultado de un proveedor si está vacío.
 ```java
 String resultado = optionalVacio.orElseGet(() -> "Valor generado por el proveedor");
 ```
 
--  <b>'orElseThrow(Supplier<? extends X> excepcionProveedor)':</b> Devuelve el valor contenido en el Optional, o lanza una excepción proporcionada por el proveedor si está vacío.
+-  <b>'orElseThrow(Supplier<? extends X> excepcionProveedor)'</b> Devuelve el valor contenido en el Optional, o lanza una excepción proporcionada por el proveedor si está vacío.
 ```java
 String resultado = optionalVacio.orElseThrow(() -> new NoSuchElementException("El Optional está vacío"));
 ```
@@ -61,7 +61,7 @@ String resultado = optionalVacio.orElseThrow(() -> new NoSuchElementException("E
 
 <p>Los métodos <b>'Optional.empty()'</b>, <b>'Optional.of(T valor)'</b>, y <b>'Optional.ofNullable(T valor)'</b> son formas de crear instancias de la clase Optional en Java, que se utiliza para representar valores opcionales que pueden ser nulos.</p>
 
-<h3>'Optional.empty()':</h3>
+<h3>'Optional.empty()'</h3>
 
 ```java
 Optional<String> optionalVacio = Optional.empty();
@@ -78,7 +78,7 @@ if (optionalVacio.isPresent()) {
 }
 ```
 
-<h3>'Optional.of(T valor)':</h3>
+<h3>'Optional.of(T valor)'</h3>
 
 ```java
 Optional<String> optionalConValor = Optional.of("Hola, mundo!");
@@ -96,7 +96,7 @@ if (optionalConValor.isPresent()) {
 }
 ```
 
-<h3>'Optional.ofNullable(T valor)':</h3>
+<h3>'Optional.ofNullable(T valor)'</h3>
 
 ```java
 String cadena = "Hola, mundo!";
@@ -165,17 +165,17 @@ try {
 
 <h3>Elección entre 'orElse', 'orElseGet', y 'orElseThrow':</h3>
 
--    <b>'orElse':</b>: Es útil cuando el valor por defecto no tiene un costo significativo para calcular y no hay efectos secundarios asociados con su cálculo.
+-    <b>'orElse'</b>: Es útil cuando el valor por defecto no tiene un costo significativo para calcular y no hay efectos secundarios asociados con su cálculo.
 
--    <b>'orElseGet':</b> Es útil cuando el valor por defecto es costoso de calcular o tiene efectos secundarios, ya que proporciona evaluación perezosa.
+-    <b>'orElseGet'</b> Es útil cuando el valor por defecto es costoso de calcular o tiene efectos secundarios, ya que proporciona evaluación perezosa.
 
--    <b>'orElseThrow':</b> Es útil cuando se desea lanzar una excepción específica si el Optional está vacío. Se puede proporcionar un proveedor que genera la excepción.
+-    <b>'orElseThrow'</b> Es útil cuando se desea lanzar una excepción específica si el Optional está vacío. Se puede proporcionar un proveedor que genera la excepción.
 
 <p>La elección entre estos métodos dependerá de la situación específica y los requisitos del código..</p>
 
 <h2 align="center">Métodos de Verificación y Ejecución Condicional:</h2>
 
--  <b>'isPresent()':</b>
+-  <b>'isPresent()'</b>
     -  Descripción: Verifica si el Optional contiene un valor.
     -  Ejemplo:
       
@@ -185,7 +185,7 @@ if (optional.isPresent()) {
     // Realizar alguna acción si hay un valor presente
 }
 ```
--  <b>'ifPresent':</b>
+-  <b>'ifPresent'</b>
     -   Descripción: Ejecuta una acción si el Optional contiene un valor.
     -  Ejemplo:
  ```java
@@ -195,7 +195,7 @@ optional.ifPresent(valor -> System.out.println("Valor presente: " + valor));
 
 <h2 align="center">Métodos de Transformación y Mapeo:</h2>
 
--  <b>'map':</b>
+-  <b>'map'</b>
     -  Descripción: Aplica una función al valor contenido en el Optional si está presente y devuelve un nuevo Optional que contiene el resultado.
     -  Ejemplo:
  ```java
@@ -203,7 +203,7 @@ Optional<String> optional = Optional.of("Hola, mundo!");
 Optional<Integer> longitudOptional = optional.map(String::length);
 ```
 
--  <b>'flatMap':</b>
+-  <b>'flatMap'</b>
     -  Descripción: Similar a map, pero la función de mapeo debe devolver un Optional. Útil para evitar Optional<Optional<T>>.
     -  Ejemplo:
  ```java
@@ -213,7 +213,7 @@ Optional<Integer> longitudOptional = optional.flatMap(s -> Optional.of(s.length(
 
 <h2 align="center">Métodos de Filtrado:</h2>
 
--  <b>'filter':</b>
+-  <b>'filter'</b>
     -  Descripción: Condiciona el Optional a contener un valor solo si cumple con el predicado proporcionado.
     -  Ejemplo:
  ```java
