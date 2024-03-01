@@ -1,6 +1,8 @@
 package org.CCristian.Optional.Ejemplo.Repositorio;
 
 import org.CCristian.Optional.Ejemplo.Models.Computador;
+import org.CCristian.Optional.Ejemplo.Models.Fabricante;
+import org.CCristian.Optional.Ejemplo.Models.Procesador;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +15,10 @@ public class Computador_Repositorio implements Repositorio_Interface<Computador>
 /*-----------------CONSTRUCTOR-----------------*/
     public Computador_Repositorio() {
         dataSource = new ArrayList<>(); /*Inicializar*/
-        dataSource.add(new Computador("Asus ROG","Strix G512"));
+        Procesador procesador = new Procesador("I9-9880H",new Fabricante("Intel"));
+        Computador asus = new Computador("Asus ROG","Strix G512");
+        asus.setProcesador(procesador);
+        dataSource.add(asus);
         dataSource.add(new Computador("MacBook Pro","MVVK2CI"));
     }
 /*-----------------MÉTODOS-----------------*/
@@ -23,7 +28,7 @@ public class Computador_Repositorio implements Repositorio_Interface<Computador>
                 .filter(c -> c.getNombre()  /*Obtiene el nombre*/
                         .toLowerCase()  /*Convierte el nombre en minúscula*/
                         .contains(nombre.toLowerCase()))    /*Solo pasan aquellos que contengan el valor suministrado*/
-                /*Si el atributo 'Nombre' del objeto c contiene el valor suministrado cumplirá la condición del 'contains'*/
+                /*Si el atributo 'Nombre' del objeto 'c' contiene el valor suministrado cumplirá la condición del 'contains'*/
                 .findFirst();   /*Devuelve el primero que haya cumplido con la condición*/
                 /*También puede devolver un vacío en caso de que ninguno haya cumplido la condición del 'equals'*/
     }

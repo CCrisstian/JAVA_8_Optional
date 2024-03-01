@@ -4,12 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80aec461-ef44-4854-8976-6b38b39ef30a" name="Changes" comment="Primeros ejemplos de 'Optional'">
-      <change afterPath="$PROJECT_DIR$/src/org/CCristian/Optional/Ejemplo/Ejemplo_Repositorio.java" afterDir="false" />
+    <list default="true" id="80aec461-ef44-4854-8976-6b38b39ef30a" name="Changes" comment="Optimizando métodos con 'Optional'">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/CCristian/Optional/Ejemplo/Ejemplo_Repositorio_MapFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/CCristian/Optional/Ejemplo/Ejemplo_Repositorio_orElse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/CCristian/Optional/Ejemplo/Ejemplo_Repositorio_orElseThrow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/CCristian/Optional/Ejemplo/Models/Fabricante.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/CCristian/Optional/Ejemplo/Models/Procesador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/CCristian/Optional/Ejemplo/Models/Computador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/CCristian/Optional/Ejemplo/Models/Computador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/CCristian/Optional/Ejemplo/Repositorio/Computador_Repositorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/CCristian/Optional/Ejemplo/Repositorio/Computador_Repositorio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/CCristian/Optional/Ejemplo/Repositorio/Repositorio_Interface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/CCristian/Optional/Ejemplo/Repositorio/Repositorio_Interface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,14 +50,23 @@
   "keyToString": {
     "Application.Ejemplo_Optional.executor": "Run",
     "Application.Ejemplo_Repositorio.executor": "Run",
+    "Application.Ejemplo_Repositorio_MapFilter.executor": "Run",
+    "Application.Ejemplo_Repositorio_Metodos_orElse.executor": "Run",
+    "Application.Ejemplo_Repositorio_orElseThrow.executor": "Run",
     "Application.Main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "settings.editor.selected.configurable": "advanced.settings"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.CCristian.Optional.Ejemplo" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -78,12 +91,21 @@
       <option name="project" value="LOCAL" />
       <updated>1709071861891</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Optimizando métodos con 'Optional'">
+      <option name="closed" value="true" />
+      <created>1709161940973</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1709161940973</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Primeros ejemplos de 'Optional'" />
-    <option name="LAST_COMMIT_MESSAGE" value="Primeros ejemplos de 'Optional'" />
+    <MESSAGE value="Optimizando métodos con 'Optional'" />
+    <option name="LAST_COMMIT_MESSAGE" value="Optimizando métodos con 'Optional'" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
